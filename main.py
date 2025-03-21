@@ -1,4 +1,4 @@
-from stats import count_words
+from stats import count_words, character_count
 
 
 def main():
@@ -11,16 +11,6 @@ def main():
         char_count = character_count(file_contents)
         for key in char_count:
             print(f"The \'{key}\' character was found {char_count[key]} times")
-
-
-def character_count(in_string):
-    char_count = {}
-    for char in in_string.lower():
-        if char in char_count:
-            char_count[char] += 1
-        else:
-            char_count[char] = 1
-    return char_count
 
 
 main()
